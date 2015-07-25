@@ -1,0 +1,19 @@
+Source: signon-plugin-oauth2
+Section: unknown
+Priority: optional
+Maintainer: Diane Trout <diane@debian.org>
+Build-Depends: debhelper (>= 9), qt5-qmake,
+ pkg-kde-tools,
+ signon-plugins-dev,
+ qtbase5-dev,
+ libqt5xmlpatterns5-dev,
+Standards-Version: 3.9.6
+Homepage: https://gitlab.com/accounts-sso/signon-plugin-oauth2
+#Vcs-Git: git://anonscm.debian.org/collab-maint/signon-plugin-oauth2.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/signon-plugin-oauth2.git;a=summary
+
+Package: signon-plugin-oauth2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: oauth2 plugin for accounts single sign on framework.
+ <insert long description, indented with spaces>
