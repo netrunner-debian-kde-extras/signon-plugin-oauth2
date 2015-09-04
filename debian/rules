@@ -20,3 +20,10 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
 	dh $@ --buildsystem qmake
+
+override_dh_auto_configure:
+	qmake PREFIX=/usr LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
+
+override_dh_auto_clean:
+	if [ -f Makefile ] ; then make distclean; fi
+	find . -name '*.so' -exec rm {} \;
