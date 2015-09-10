@@ -1,0 +1,18 @@
+Author: Diane Trout <diane@debian.org>
+Description: Pass hardening flags to the compiler through qmake.
+ (Qmake doesn't respect the standard environment variables).
+--- a/common-project-config.pri
++++ b/common-project-config.pri
+@@ -20,6 +20,12 @@
+ # we don't like warnings...
+ QMAKE_CXXFLAGS += -Werror
+ 
++# Add in hardning macros
++QMAKE_CPPFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)
++QMAKE_CFLAGS   += $(shell dpkg-buildflags --get CFLAGS)
++QMAKE_CXXFLAGS += $(shell dpkg-buildflags --get CXXFLAGS)
++QMAKE_LFLAGS   += $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
++
+ TOP_SRC_DIR     = $$PWD
+ 
+ #DEFINES += QT_NO_DEBUG_OUTPUT
