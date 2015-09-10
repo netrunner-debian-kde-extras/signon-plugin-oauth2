@@ -13,3 +13,6 @@ override_dh_auto_configure:
 override_dh_auto_clean:
 	if [ -f Makefile ] ; then make distclean; fi
 	find . -name '*.so' -exec rm {} \;
+
+override_dh_strip:
+	dh_strip --dbg-package=signon-plugin-oauth2-dbg
