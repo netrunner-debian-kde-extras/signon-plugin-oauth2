@@ -1,0 +1,14 @@
+Author: Diane Trout <diane@debian.org>
+Description: Remove allocating an unused data pointer.
+ The more picky Debian build environment made this an error.
+--- a/src/base-plugin.cpp
++++ b/src/base-plugin.cpp
+@@ -171,8 +171,6 @@
+ bool BasePlugin::handleNetworkError(QNetworkReply *reply,
+                                     QNetworkReply::NetworkError err)
+ {
+-    Q_D(BasePlugin);
+-
+     /* Has been handled by handleSslErrors already */
+     if (err == QNetworkReply::SslHandshakeFailedError) {
+         return true;
