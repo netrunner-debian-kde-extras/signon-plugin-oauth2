@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 9), qt5-qmake,
  libqt5xmlpatterns5-dev,
 Standards-Version: 3.9.6
 Homepage: https://gitlab.com/accounts-sso/signon-plugin-oauth2
-#Vcs-Git: git://anonscm.debian.org/collab-maint/signon-plugin-oauth2.git
-#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/signon-plugin-oauth2.git;a=summary
+Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-extras/signon-plugin-oauth2.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/kde-extras/signon-plugin-oauth2.git/
 
 Package: signon-plugin-oauth2
 Architecture: any
