@@ -1,3 +1,1 @@
-usr/bin/oauthclient
 usr/lib/*/signon/liboauth2plugin.so
-etc/signon-ui/webkit-options.d/*.conf

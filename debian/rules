@@ -14,9 +14,6 @@ override_dh_auto_clean:
 	if [ -f Makefile ] ; then make distclean; fi
 	find . -name '*.so' -exec rm {} \;
 
-override_dh_strip:
-	dh_strip --dbg-package=signon-plugin-oauth2-dbg
-
 override_dh_install:
 	rm debian/tmp/usr/bin/signon-oauth2plugin-tests
 	rm debian/tmp/usr/share/signon-oauth2plugin-tests/tests.xml

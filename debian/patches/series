@@ -1,2 +1,3 @@
+dont-install-examples.patch
 hardening.patch
 unused-variable.patch
