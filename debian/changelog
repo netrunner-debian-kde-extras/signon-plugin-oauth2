@@ -2,4 +2,4 @@ signon-plugin-oauth2 (0.22-1) unstable; urgency=low
 
   * Initial release
 
- -- Diane Trout <diane@debian.org>  Thu, 23 Jul 2015 21:56:13 -0700
+ -- Diane Trout <diane@debian.org>  Fri, 06 Nov 2015 22:34:08 -0800
